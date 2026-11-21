@@ -1,0 +1,116 @@
+
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        x:Class="RegistroPeliculasEscritorio.MainWindow"
+        Title="Sistema de Registro de Películas"
+        Width="850"
+        Height="600"
+        MinWidth="750"
+        MinHeight="500"
+        WindowStartupLocation="CenterScreen">
+
+    <ScrollViewer>
+        <StackPanel Margin="25"
+                    Spacing="15">
+
+            
+            <TextBlock Text="REGISTRO DE PELÍCULAS"
+                       FontSize="26"
+                       FontWeight="Bold"
+                       HorizontalAlignment="Center"/>
+
+            <TextBlock Text="Ingrese la información de la película"
+                       FontSize="15"
+                       HorizontalAlignment="Center"/>
+
+            
+            <Border Background="#FFF3CD"
+                    BorderBrush="#E0B44C"
+                    BorderThickness="1"
+                    CornerRadius="6"
+                    Padding="10">
+
+                <TextBlock Name="txtMensaje"
+                           Text="Bienvenido al sistema de registro de películas."
+                           FontSize="14"
+                           FontWeight="SemiBold"
+                           Foreground="#664D03"
+                           TextWrapping="Wrap"
+                           VerticalAlignment="Center"
+                           MinHeight="25"/>
+
+            </Border>
+
+            
+            <Border BorderBrush="Gray"
+                    BorderThickness="1"
+                    CornerRadius="8"
+                    Padding="15">
+
+                <StackPanel Spacing="10">
+
+                    <TextBlock Text="Título de la película"
+                               FontWeight="Bold"/>
+
+                    <TextBox Name="txtTitulo"
+                             Watermark="Ejemplo: Interestelar"/>
+
+                    <TextBlock Text="Género"
+                               FontWeight="Bold"/>
+
+                    <TextBox Name="txtGenero"
+                             Watermark="Ejemplo: Ciencia ficción"/>
+
+                    <TextBlock Text="Año de estreno"
+                               FontWeight="Bold"/>
+
+                    <TextBox Name="txtAnio"
+                             Watermark="Ejemplo: 2014"/>
+
+                    
+                    <WrapPanel HorizontalAlignment="Center"
+                               Margin="0,10,0,0">
+
+                        <Button Name="btnGuardar"
+                                Content="Guardar"
+                                Width="110"
+                                Margin="5"/>
+
+                        <Button Name="btnConsultar"
+                                Content="Consultar"
+                                Width="110"
+                                Margin="5"/>
+
+                        <Button Name="btnModificar"
+                                Content="Modificar"
+                                Width="110"
+                                Margin="5"/>
+
+                        <Button Name="btnEliminar"
+                                Content="Eliminar"
+                                Width="110"
+                                Margin="5"/>
+
+                        <Button Name="btnLimpiar"
+                                Content="Limpiar"
+                                Width="110"
+                                Margin="5"/>
+
+                    </WrapPanel>
+
+                </StackPanel>
+
+            </Border>
+
+            
+            <TextBlock Text="Películas registradas"
+                       FontSize="19"
+                       FontWeight="Bold"/>
+
+            <ListBox Name="lstPeliculas"
+                     Height="220"/>
+
+        </StackPanel>
+    </ScrollViewer>
+
+</Window>
